@@ -100,12 +100,14 @@
     <!-- SCREEB WIDGET -->
     <script>
       var host = (new URL(document.location)).searchParams.get('host') || 'localhost:2020';
+      var channelId = (new URL(document.location)).searchParams.get('channel_id');
+
       (function (w,d,s,o,f,js,fjs) {
           w['ScreebObject']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
           js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.type = 'text/javascript';
           js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
       }(window, document, 'script', '$screeb', 'http://' + host + '/tag.js'));
-      $screeb('init', 'XXXXXXX');
+      $screeb('init', channelId);
     </script>
     <!-- END OF SCREEB WIDGET -->
 
