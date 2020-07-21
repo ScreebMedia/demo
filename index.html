@@ -102,7 +102,7 @@
       (function (w,d,s,o,f,js,fjs) {
           w['ScreebObject']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
           js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.type = 'text/javascript';
-          js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+          js.id = o; js.src = f; js.async = 1; d.getElementsByTagName("head")[0].appendChild(js);
       }(window, document, 'script', '$screeb', 'https://t.screeb.app/tag.js'));
       $screeb('init', 'a13482eb-0687-4bf3-a499-97126e6e110c');
       $screeb('campaign.start', '8da9d644-2ff5-40af-949c-34f17960482e', {multiple: true});
