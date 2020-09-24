@@ -102,11 +102,11 @@
       var host = (new URL(document.location)).searchParams.get('host') || 'localhost:2020';
       var channelId = (new URL(document.location)).searchParams.get('channel_id');
 
-      (function (w,d,s,o,f,js,fjs) {
-          w['ScreebObject']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
-          js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.type = 'text/javascript';
-          js.id = o; js.src = f; js.async = 1; d.getElementsByTagName("head")[0].appendChild(js);
-      }(window, document, 'script', '$screeb', 'http://' + host + '/tag.js'));
+      (function (s,c,r,ee,b) {
+          s['ScreebObject']=r;s[r]=s[r]||function(){(s[r].q=s[r].q||[]).push(arguments)};
+          b=c.createElement('script');b.type='text/javascript';
+          b.id=r;b.src=ee;b.async=1;c.getElementsByTagName("head")[0].appendChild(b);
+      }(window,document,'$screeb','http://' + host + 'tag.js'));
       $screeb('init', channelId);
     </script>
     <!-- END OF SCREEB WIDGET -->
