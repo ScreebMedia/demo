@@ -105,7 +105,10 @@
           b.id=r;b.src=ee;b.async=1;c.getElementsByTagName("head")[0].appendChild(b);
       }(window,document,'$screeb','https://t.screeb.app/tag.js'));
       $screeb('init', 'a13482eb-0687-4bf3-a499-97126e6e110c');
-      // $screeb('campaign.start', '8da9d644-2ff5-40af-949c-34f17960482e', {multiple: true});
+
+      var visitorId = (new URL(document.location)).searchParams.get('visitor_id');
+      if (!!visitorId && visitorId.length > 0)
+          $screeb('identity', visitorId, {'email':visitorId, 'age': 42, 'plan': 'free'});
     </script>
     <!-- END OF SCREEB WIDGET -->
 
