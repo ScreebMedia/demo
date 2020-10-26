@@ -101,6 +101,7 @@
     <script type="text/javascript">
       var host = (new URL(document.location)).searchParams.get('host') || 'localhost:2020';
       var channelId = (new URL(document.location)).searchParams.get('channel_id');
+      var visitorId = (new URL(document.location)).searchParams.get('visitor_id') || 'samuel@screeb.media';
 
       (function (s,c,r,ee,b) {
           s['ScreebObject']=r;s[r]=s[r]||function(){(s[r].q=s[r].q||[]).push(arguments)};
@@ -108,7 +109,7 @@
           b.id=r;b.src=ee;b.async=1;c.getElementsByTagName("head")[0].appendChild(b);
       }(window,document,'$screeb','http://' + host + '/tag.js'));
       $screeb('init', channelId);
-      $screeb('identity', 'samuel@screeb.media', {'email':'samuel@screeb.media', 'age': 42});
+      $screeb('identity', visitorId, {'email': visitorId, 'age': 42});
     </script>
     <!-- END OF SCREEB WIDGET -->
 
